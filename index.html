@@ -5,30 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Company Website</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-  <header class="main-header py-[7px] px-[10px] flex justify-between items-center">
+<body class="font-sans">
+
+  <!-- Header -->
+  <header class="main-header py-2 px-4 flex justify-between items-center bg-white shadow">
     <div class="logo"></div>
     <nav class="flex gap-2">
-      <a href="#home-page" class="border p-[5px]">Home</a>
-      <a href="#our-profile" class="border p-[5px]">Our Profile</a>
-      <a href="#portofolio" class="border p-[5px]">Portofolio</a>
-      <a href="#message-us" class="border p-[5px]">Message Us</a>
+      <a href="#home-page" class="border px-3 py-1 rounded">Home</a>
+      <a href="#our-profile" class="border px-3 py-1 rounded">Our Profile</a>
+      <a href="#portfolio" class="border px-3 py-1 rounded">Portfolio</a>
+      <a href="#message-us" class="border px-3 py-1 rounded">Message Us</a>
     </nav>
   </header>
+
   <hr>
 
-  <main>
+  <main class="p-4">
+
     <!-- Home -->
-    <section id="home-page" class="min-h-[400px] text-center p-6">
-      <h2 class="text-[30px] font-bold py-4">
+    <section id="home-page" class="min-h-[500px] flex flex-col justify-center items-center text-center">
+      <h2 class="text-3xl font-bold py-4">
         Welcome <span id="username"></span> to Our Website
       </h2>
-      <p class="text-lg">We are glad to have you here. Explore our profile and portfolio to know more about us!</p>
+      <p class="text-lg text-gray-600">We are happy to have you here. Explore our profile and portfolio!</p>
     </section>
-    <hr>
+
+    <hr />
 
     <!-- Our Profile -->
     <section id="our-profile" class="min-h-[400px] p-6">
@@ -48,22 +56,26 @@
     </section>
     <hr>
 
-    <!-- Portofolio -->
-    <section id="portofolio" class="min-h-[400px] p-6">
-      <h2 class="text-center text-[30px] font-bold py-4">Portofolio</h2>
+    <hr />
+
+    <!-- Portfolio -->
+      <section id="portfolio" class="min-h-[400px] p-6">
+      <h2 class="text-center text-[30px] font-bold py-4">Portfolio</h2>
       <div class="grid md:grid-cols-3 gap-4 max-w-[900px] mx-auto">
         <div class="p-4 border rounded">📱 Mobile App Project</div>
         <div class="p-4 border rounded">💻 Web Development Project</div>
         <div class="p-4 border rounded">🎨 Graphic Design Project</div>
       </div>
     </section>
-    <hr>
+    <hr />
 
     <!-- Message Us -->
-    <section id="message-us" class="min-h-[400px] p-6">
-      <h2 class="text-center text-[30px] font-bold py-4">Message Us</h2>
-      <div class="flex flex-col md:flex-row gap-6 max-w-[900px] mx-auto">
-        
+    <section id="message-us" class="min-h-[500px] p-6">
+      <header>
+        <h2 class="text-center text-3xl font-bold py-4">Message Us</h2>
+      </header>
+
+      <div class="flex flex-col md:flex-row gap-6">
         <!-- Form -->
         <form id="contactForm" class="flex-1 p-4 border rounded bg-gray-50">
           <div class="mb-3">

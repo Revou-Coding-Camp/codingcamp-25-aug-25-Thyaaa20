@@ -1,27 +1,27 @@
-// Greet user
+// Greeting
 function greet() {
   let name = prompt("Masukkan Nama Anda : ");
-  document.getElementById("username").innerText = name || "Guest";
+  document.getElementById('username').innerText = name || "Guest";
 }
 greet();
 
-// Form handling
-document.getElementById("contactForm").addEventListener("submit", function(e) {
+// Handle form submit
+document.getElementById("messageForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
   const name = document.getElementById("name").value;
-  const dob = document.getElementById("dob").value;
-  const gender = document.querySelector('input[name="gender"]:checked')?.value;
+  const date = document.getElementById("date").value;
+  const gender = document.getElementById("gender").value;
   const message = document.getElementById("message").value;
-  const time = new Date().toLocaleString();
+  const time = new Date().toLocaleTimeString();
 
   const output = `
     <p><strong>Name:</strong> ${name}</p>
-    <p><strong>Tanggal Lahir:</strong> ${dob}</p>
-    <p><strong>Jenis Kelamin:</strong> ${gender}</p>
+    <p><strong>Date:</strong> ${date}</p>
+    <p><strong>Gender:</strong> ${gender}</p>
     <p><strong>Message:</strong> ${message}</p>
-    <p><strong>Submitted At:</strong> ${time}</p>
+    <p><em>Submitted at: ${time}</em></p>
   `;
 
-  document.getElementById("output").innerHTML = `<h3 class="font-bold mb-2">Submitted Data:</h3>${output}`;
+  document.getElementById("output").innerHTML = output;
 });
