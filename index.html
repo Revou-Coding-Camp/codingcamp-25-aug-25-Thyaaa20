@@ -1,23 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Website</title>
 
-        
-        <link rel="stylesheet" href="CSS\style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-   
-    <header></header>
+  <header class="main-header py-[7px] px-[10px] flex justify-between items-center">
+    <div class="logo"></div>
+    <nav class="flex gap-2">
+      <a href="#home-page" class="border p-[5px]">Home</a>
+      <a href="#our-profile" class="border p-[5px]">Our Profile</a>
+      <a href="#portofolio" class="border p-[5px]">Portofolio</a>
+      <a href="#message-us" class="border p-[5px]">Message Us</a>
+    </nav>
+  </header>
+  <hr>
 
-    <main></main>
-    
-    <footer></footer>
+  <main>
+    <!-- Home -->
+    <section id="home-page" class="min-h-[400px] text-center p-6">
+      <h2 class="text-[30px] font-bold py-4">
+        Welcome <span id="username"></span> to Our Website
+      </h2>
+      <p class="text-lg">We are glad to have you here. Explore our profile and portfolio to know more about us!</p>
+    </section>
+    <hr>
 
+    <!-- Our Profile -->
+    <section id="our-profile" class="min-h-[400px] p-6">
+      <h2 class="text-center text-[30px] font-bold py-4">Our Profile</h2>
+      <div class="max-w-[800px] mx-auto text-center">
+        <img src="https://picsum.photos/600/200" alt="Company Banner" class="mx-auto rounded mb-4">
+        <p class="mb-4">We are a creative company dedicated to delivering high-quality solutions for our clients. Our team is composed of passionate individuals who always strive for innovation.</p>
+        <h3 class="font-semibold">Vision</h3>
+        <p>To become the most trusted company in digital innovation.</p>
+        <h3 class="font-semibold mt-3">Mission</h3>
+        <ul class="list-disc list-inside">
+          <li>Provide excellent services to our customers.</li>
+          <li>Innovate continuously to meet market needs.</li>
+          <li>Empower our team to grow professionally.</li>
+        </ul>
+      </div>
+    </section>
+    <hr>
 
-    <script src="js\script.js"></script>
+    <!-- Portofolio -->
+    <section id="portofolio" class="min-h-[400px] p-6">
+      <h2 class="text-center text-[30px] font-bold py-4">Portofolio</h2>
+      <div class="grid md:grid-cols-3 gap-4 max-w-[900px] mx-auto">
+        <div class="p-4 border rounded">📱 Mobile App Project</div>
+        <div class="p-4 border rounded">💻 Web Development Project</div>
+        <div class="p-4 border rounded">🎨 Graphic Design Project</div>
+      </div>
+    </section>
+    <hr>
 
+    <!-- Message Us -->
+    <section id="message-us" class="min-h-[400px] p-6">
+      <h2 class="text-center text-[30px] font-bold py-4">Message Us</h2>
+      <div class="flex flex-col md:flex-row gap-6 max-w-[900px] mx-auto">
+        
+        <!-- Form -->
+        <form id="contactForm" class="flex-1 p-4 border rounded bg-gray-50">
+          <div class="mb-3">
+            <label for="name" class="block mb-1">Name:</label>
+            <input type="text" id="name" name="name" class="w-full p-2 border rounded" required>
+          </div>
+          <div class="mb-3">
+            <label for="dob" class="block mb-1">Tanggal Lahir:</label>
+            <input type="date" id="dob" name="dob" class="w-full p-2 border rounded" required>
+          </div>
+          <div class="mb-3">
+            <span class="block mb-1">Jenis Kelamin:</span>
+            <label><input type="radio" name="gender" value="Laki-laki" required> Laki-laki</label>
+            <label class="ml-4"><input type="radio" name="gender" value="Perempuan" required> Perempuan</label>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="block mb-1">Message:</label>
+            <textarea id="message" name="message" rows="4" class="w-full p-2 border rounded" required></textarea>
+          </div>
+          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Send</button>
+        </form>
+
+        <!-- Output -->
+        <div id="output" class="flex-1 p-4 border rounded bg-white">
+          <h3 class="font-bold mb-2">Submitted Data:</h3>
+          <p>No data yet.</p>
+        </div>
+      </div>
+    </section>
+    <hr>
+  </main>
+
+  <footer class="text-center py-4 bg-gray-200">
+    <p>&copy; 2025 Raffi Radithya Bintang | All Rights Reserved</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

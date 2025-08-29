@@ -1,0 +1,18 @@
+.logo {
+  height: 50px;
+  width: 50px;
+  background-color: pink;
+  background-image: url("https://picsum.photos/200");
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
